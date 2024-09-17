@@ -60,11 +60,12 @@ def callModel():
         current_datetime = datetime.now()
         prediction_expiry_timestamp = current_datetime + timedelta(hours=24)
 
-        modelResult = {
+          modelResult = {
             'model_digital_asset': 'ETH',
             'model_digital_asset_name': 'Ethereum',
             'model_digital_asset_price': float(predicted_ETH_nextdayhigh_price),
-            'model_digital_asset_next_24_hour_volume(in B)': 'static vol',
+            'model_digital_asset_volume': float(16336004390) ,
+            'model_digital_asset_volatality': float(115.2),
             'model_current_time_stamp': current_datetime.strftime("%Y-%m-%d %H:%M:%S"),
             'model_prediction_expiry_timestamp': prediction_expiry_timestamp.strftime("%Y-%m-%d %H:%M:%S")
         }
