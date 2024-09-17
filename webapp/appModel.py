@@ -56,11 +56,11 @@ def callModel():
         # Predicting the next day's high price
         predicted_ETH_nextdayhigh_price = model.predict(new_data)[0]
 
-        # Get current date and time
+        # Get current date and time commented.
         current_datetime = datetime.now()
         prediction_expiry_timestamp = current_datetime + timedelta(hours=24)
 
-          modelResult = {
+        modelResult = {
             'model_digital_asset': 'ETH',
             'model_digital_asset_name': 'Ethereum',
             'model_digital_asset_price': float(predicted_ETH_nextdayhigh_price),
